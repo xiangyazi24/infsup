@@ -1,0 +1,62 @@
+<script>
+  window. MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+
+      <!--tags: 'ams', (add this back if I need autonumbering)-->
+
+      packages: {'[+]': ['ams']},
+      macros: {
+        RR: "{\\bf R}",
+        bold: ["{\\bf #1}", 1],
+        f: ["#1f(#2)", 2],
+        relax: ["{}"]
+      },
+      environments: {
+        braced: ["\\left\\{", "\\right\\}"],
+        ABC: ['(#1)(#2)(', ')', 2, 'X']
+      }
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    },
+
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          for (let element of document.getElementsByClassName("has-mathjax")) {
+            element.style.visibility = "visible"
+            }
+        });
+      }
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+
+<script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"
+    integrity="sha384-+BSz3oj3ILMYvOBr16U9i0H4RZRmGyQQ+1q9eqr8T3skmAFrJk8GmgwgqlCZdNSo"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    type="text/javascript"></script>
+
+
+{{- if or (.HasShortcode "block") (.HasShortcode "inline") -}}
+<style>
+.has-mathjax {
+    visibility: hidden;
+}
+</style>
+{{- end -}}

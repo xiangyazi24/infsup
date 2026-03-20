@@ -1,0 +1,127 @@
+baseurl: "https://infsup.com/"
+languageCode: "en-us"
+title: "Zinan Huang | 黄紫楠"
+theme: "hugo-ivy"
+hasCJKLanguage: true
+enableEmoji: true
+footnotereturnlinkcontents: "↑"
+rssLimit: 10
+
+permalinks:
+  cn: "/:sections/:year/:month/:slug/"
+  en: "/:sections/:year/:month/:slug/"
+  math: "/:sections/:year/:month/:slug/"
+
+menu:
+  main:
+    - name: "English"
+      url: "/en/"
+      weight: 1
+    - name: "Math ∩ CS"
+      url: "/math/"
+      weight: 2
+    - name: "中文"
+      url: "/cn/"
+      weight: 3
+    - name: "About"
+      url: "/about/"
+      weight: 4
+  en:
+    - name: "English"
+      url: "/en/"
+      weight: 1
+    - name: "Math ∩ CS"
+      url: "/math/"
+      weight: 2
+    - name: "中文"
+      url: "/cn/"
+      weight: 3
+    - name: "About"
+      url: "/about/"
+      weight: 4
+  cn:
+    - name: "English"
+      url: "/en/"
+      weight: 1
+    - name: "Math ∩ CS"
+      url: "/math/"
+      weight: 2
+    - name: "中文"
+      url: "/cn/"
+      weight: 3
+    - name: "About"
+      url: "/about/"
+      weight: 4
+  Math:
+    - name: "English"
+      url: "/en/"
+      weight: 1
+    - name: "Math ∩ CS"
+      url: "/math/"
+      weight: 2
+    - name: "中文"
+      url: "/cn/"
+      weight: 3
+    - name: "About"
+      url: "/about/"
+      weight: 4
+
+params:
+  description: "Zinan Huang's blog — math, computing, literature, and life"
+  footer: "&copy; [Zinan Huang](/) 2026 - {Year}"
+  customJS:
+    - "comment-utils.js"
+    - "fix-toc.js"
+    - "center-img.js"
+    - "right-quote.js"
+    - "no-highlight.js"
+    - "fix-footnote.js"
+    - "math-code.js"
+    - "hash-notes.js"
+    - "toggle-notes.js"
+    - "post-nav.js"
+    - "external-link.js"
+    - "alt-title.js"
+    - "header-link.js"
+  githubContentURL: "https://github.com/xiangyazi24/infsup/tree/master/content/"
+  twitterImage: "/images/logo.png"
+
+  logo:
+    en:
+      img: "/images/logo.png"
+      url: "/"
+      alt: "Zinan Huang"
+      tag: ""
+
+  author:
+    en: "Zinan Huang"
+    cn: "黄紫楠"
+
+  lang:
+    edit:
+      cn: "编辑"
+    license:
+      cn: "版权"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      autoHeadingIDType: blackfriday
+  tableOfContents:
+    startLevel: 1
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: true
+    noHl: false
+    style: monokai
+    tabWidth: 4

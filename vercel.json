@@ -1,0 +1,33 @@
+{
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.25.1"
+    }
+  },
+  "github": {
+    "silent": true
+  },
+  "trailingSlash": true,
+  "redirects": [
+
+    {
+      "source": "/cv/",
+      "destination": "/en/vitae/"
+    },
+
+    {
+      "source": "/pic",
+      "destination": "/static/org/pic"
+    },
+
+    {
+      "statusCode": 301,
+      "source": "/gh/(.*)",
+      "destination": "https://github.com/xiangyazi24/$1"
+    },
+    {
+      "source": "/([^/]+)/guestbook.php",
+      "destination": "/$1/about/"
+    }
+  ]
+}
