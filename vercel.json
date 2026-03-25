@@ -1,7 +1,7 @@
 {
   "build": {
     "env": {
-      "HUGO_VERSION": "0.25.1"
+      "HUGO_VERSION": "0.145.0"
     }
   },
   "github": {
@@ -9,17 +9,14 @@
   },
   "trailingSlash": true,
   "redirects": [
-
     {
       "source": "/cv/",
       "destination": "/en/vitae/"
     },
-
     {
       "source": "/pic",
       "destination": "/static/org/pic"
     },
-
     {
       "statusCode": 301,
       "source": "/gh/(.*)",

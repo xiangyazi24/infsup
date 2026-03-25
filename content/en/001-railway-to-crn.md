@@ -2,7 +2,6 @@
 title: "From Railway Relays to Chemical Reaction Networks: Analog Computing Through the Ages"
 date: 2026-03-19
 tags: [analog-computing, CRN, history, trains]
-lang: en
 status: draft
 ---
 
