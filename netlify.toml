@@ -1,9 +1,6 @@
 [build]
-  command = "./build.sh"
-  publish = "public"
+  command = "python3 -m pip install --user mpmath && python3 static/q4913/compute.py"
+  publish = "static/q4913"
 
 [build.environment]
-  HUGO_VERSION = "0.145.0"
-
-[context.production.environment]
-  HUGO_ENV = "production"
+  PYTHON_VERSION = "3.12"
