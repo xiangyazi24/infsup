@@ -9,6 +9,10 @@ Disallow: /' > robots.txt
 fi
 
 cd ..
+
+# Temporary computation for Q4957; this branch is never merged.
+node scripts/q4957_compute.js > static/q4957.json
+
 # Netlify uses $CONTEXT and Vercel uses $VERCEL_ENV
 if [ "${VERCEL_ENV:-$CONTEXT}" = "production" ]; then
   hugo -F
